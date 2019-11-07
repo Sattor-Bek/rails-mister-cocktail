@@ -1,0 +1,13 @@
+<%= form_for @cocktail do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :ingredient %>
+    <%= f.text_field :ingredient, class: 'form-control' %>
+  <div class="mt-3">
+    <%= f.submit class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', '#', class: 'btn btn-danger ml-2' %>
+  </div>
+<% end %>

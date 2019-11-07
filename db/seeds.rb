@@ -2,6 +2,16 @@
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
+require 'open-uri'
+require 'JSON'
+
+url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+json = open(url).read
+ingredients = JSON.parse(json)
+
+ingredients["drinks"].each do |ingredient|
+  Ingredient.create!(name: ingredient["strIngredient1"])
+end
+
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
