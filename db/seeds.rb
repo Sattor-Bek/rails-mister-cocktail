@@ -13,5 +13,17 @@ ingredients["drinks"].each do |ingredient|
   Ingredient.create!(name: ingredient["strIngredient1"])
 end
 
+# name_url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
+# json_name = open(name_url).read
+# cocktail_name = JSON.parse(json_name)
+# cocktail_name['drinks'].
+# @cocktails = []
+# 10.times do
+#   @cocktail_names.push()
+# end
+
+# cocktail_names.each do |cocktail|
+#   Cocktail.create!(name: cocktail)
+# end
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
