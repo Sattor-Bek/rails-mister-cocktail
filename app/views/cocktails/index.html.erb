@@ -7,7 +7,7 @@
 
 <div class="cards" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1));">
 <% @cocktails.each do |cocktail| %>
-  <%= cl_image_path cocktail.photo %>
+  <%= cl_image_tag cocktail.photo  unless cocktail.photo.blank? %>
   <%= link_to "#{cocktail.name}", cocktail_path(cocktail) %>
 <% end %>
 </div>
