@@ -16,8 +16,11 @@ end
 # name_url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
 # json_name = open(name_url).read
 # cocktail_name = JSON.parse(json_name)
-# cocktail_name['drinks'].
 # @cocktails = []
+# cocktail_name['drinks'].each do |coq|
+#   @cocktails.push(o)
+# end
+
 # 10.times do
 #   @cocktail_names.push()
 # end
